@@ -1,15 +1,44 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+
+//Componente simple
+const saludaSimple = (persona) => <h3>Hola {persona}</h3>;
+
+// Componente como función
+const SaludaFuncion = (props) => {
+  console.log(props);
+  return <h3>Hola2 {props.name}</h3>;
+};
+
+//Componente como clase
+class SaludaClase extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    console.log(this.props);
+    return <h3>Hola3 {this.props.name}</h3>;
+  }
+}
 
 function App() {
   const hola = <h2>Hola mundo React</h2>;
-  const saluda = (persona) => <h3>Hola {persona}</h3>;
   return (
     <div className="App">
       <header className="App-header">
-        {hola}
-        {saluda("Paco")}
-        {2 + 2}
+        {hola} {2 + 2}
+        {saludaSimple("saludaSimple")}
+        <SaludaFuncion
+          name="SaludaFuncion"
+          age={33}
+          objeto={{ hobbies: ["codding"] }}
+        />
+        <SaludaClase
+          name="SaludaClase"
+          age={33}
+          objeto={{ hobbies: ["codding"] }}
+        />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
