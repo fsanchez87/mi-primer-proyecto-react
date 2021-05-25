@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Counter initialValue={5}/>
-        <Counter initialValue={4}/>
+        <Counter initialValue={5} step={5}/>
+        <Counter initialValue={10} step={2}/>
       </header>
     </div>
   );
