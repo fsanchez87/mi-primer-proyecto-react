@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
-import Person from "./components/Person"
-
+import Counter from "./components/Counter.jsx";
 /**
  * KATA I: Componentes en React
  *
@@ -14,9 +13,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Person name="Paco" surname="Sánchez" age={33}></Person>
-        <Person name="Jose" surname="Sánchez" age={23}></Person>
-        <Person name="Francisco" surname="Sánchez" age={43}></Person>
+        <Counter initialValue={5}/>
+        <Counter initialValue={4}/>
       </header>
     </div>
   );
