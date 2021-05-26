@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import Counter from "./components/Counter.jsx";
+import Counter from "./components/CounterFuncional";
 import Estado from "./components/Estado.jsx";
 import Efecto from "./components/Efecto";
 

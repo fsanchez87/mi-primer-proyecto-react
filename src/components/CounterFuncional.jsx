@@ -12,44 +12,33 @@
     ●    Que podamos decirle al componente si queremos que incremente de 2 en 2, 3 en 3, etc.
  */
 
-import React, { Component, useState } from "react";
-
-// class Counter extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       counter: this.props.initialValue,
-//     };
-//   }
-
-//   increment = () => {
-//     this.setState({ counter: this.state.counter + this.props.step });
-//   };
-//   decrement = () => {
-//     if (this.state.counter > 0) {
-//       this.setState({ counter: this.state.counter - this.props.step });
-//     }
-//   };
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <button onClick={this.increment}>+</button>
-//         <span> {this.state.counter} </span>
-//         <button onClick={this.decrement}>-</button>
-//       </div>
-//     );
-//   }
-// }
+import React, { useEffect, useState } from "react";
 
 const Counter = (props) => {
   const [counter, setCounter] = useState(props.initialValue);
+
+  //componentDidMount
+  useEffect(() => {
+    console.log("El counter se ha montado");
+    //componentWillUnmount
+    return () => {
+      console.log("El counter se ha desmontado");
+    };
+  }, []);
+  //componentDidUpdate
+  useEffect(() => {
+    console.log("El counter se ha actualizado");
+    if (counter < 50) {
+      setCounter(counter + props.step);
+    }
+  });
+
   const increment = () => {
     setCounter(counter + props.step);
   };
   const decrement = () => {
     if (counter > 0) {
-        setCounter(counter - props.step);
+      setCounter(counter - props.step);
     }
   };
   return (
