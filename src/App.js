@@ -1,6 +1,8 @@
 import "./App.css";
 import React from "react";
 import Counter from "./components/Counter.jsx";
+import Estado from "./components/Estado.jsx";
+import Efecto from "./components/Efecto";
 /**
  * KATA I: Componentes en React
  *
@@ -9,12 +11,13 @@ import Counter from "./components/Counter.jsx";
  */
 
 function App() {
-  const hola = <h2>Hola mundo React</h2>;
   return (
     <div className="App">
       <header className="App-header">
-        <Counter initialValue={5} step={5}/>
-        <Counter initialValue={10} step={2}/>
+        <Counter initialValue={5} step={5} />
+        <Counter initialValue={10} step={2} />
+        <Estado />
+        <Efecto />
       </header>
     </div>
   );
