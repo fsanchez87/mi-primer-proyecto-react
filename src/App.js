@@ -1,8 +1,9 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Counter from "./components/Counter.jsx";
 import Estado from "./components/Estado.jsx";
 import Efecto from "./components/Efecto";
+
 /**
  * KATA I: Componentes en React
  *
@@ -11,11 +12,19 @@ import Efecto from "./components/Efecto";
  */
 
 function App() {
+  const [showCounters, setShowCounters] = useState(true);
+  const quitarCounters = () => setShowCounters(false);
   return (
     <div className="App">
       <header className="App-header">
-        <Counter initialValue={5} step={5} />
-        <Counter initialValue={10} step={2} />
+        {showCounters && (
+          <React.Fragment>
+            <Counter initialValue={5} step={5} />
+            <Counter initialValue={10} step={2} />
+          </React.Fragment>
+        )}
+        <button onClick={quitarCounters}>Quitar Counters</button>
+
         <Estado />
         <Efecto />
       </header>

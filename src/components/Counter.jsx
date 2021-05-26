@@ -36,6 +36,9 @@ class Counter extends Component {
       this.setState({ counter: this.state.counter + this.props.step });
     }
   }
+  componentWillUnmount() {
+    console.log("El counter se ha desmontado");
+  }
 
   increment = () => {
     this.setState({ counter: this.state.counter + this.props.step });
