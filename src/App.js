@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Counter from "./components/CounterFuncional";
 import Estado from "./components/Estado.jsx";
 import Efecto from "./components/Efecto";
+import UnreadMessages from "./components/UnreadMessages";
 
 /**
  * KATA I: Componentes en React
@@ -27,6 +28,7 @@ function App() {
 
         <Estado />
         <Efecto />
+        <UnreadMessages unreadMessages={['me gusta', 'me gusta']}/>
       </header>
     </div>
   );
