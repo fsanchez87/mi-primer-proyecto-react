@@ -13,3 +13,12 @@ En React, el estado mutable es mantenido normalmente en la propiedad estado de l
 
 Podemos combinar ambos haciendo que el estado de React sea la “única fuente de la verdad”.
 El componente React que representa un formulario también controla lo que sucede en ese formulario en la posterior entrada del usuario
+
+
+## SASS y SCSS
+
+SASS es un preprocesador de estilos, y según sus creadores, un CSS con superpoderes para crear
+estilos que incluyen variables, métodos etc.
+
+`yarn add node-sass` 
+`npm install node-sass`

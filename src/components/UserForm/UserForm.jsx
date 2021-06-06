@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserForm.css";
+import "./UserForm.scss";
 
 class UserForm extends React.Component {
   constructor(props) {

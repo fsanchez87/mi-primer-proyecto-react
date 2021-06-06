@@ -1,0 +1,34 @@
+@import '../colors.scss';
+
+$padding: 0.5em;
+
+.userForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.8em;
+    min-height: 50vh;
+    background: $RS-CLEAN-1-hex;
+    border-radius: 0.3em;
+
+    input,
+    select {
+        all: unset;
+        padding: $padding;
+        background: whitesmoke;
+        color: $RS-CLEAN-1-hex;
+        border-radius: 0.3em;
+    }
+
+    button {
+        all: unset;
+        padding: $padding;
+        background: $RS-CLEAN-2-hex;
+        color: whitesmoke;
+        border-radius: 0.3em;
+    }
+
+    ::placeholder {
+        color: $RS-CLEAN-4-hex;
+    }
+}
