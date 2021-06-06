@@ -1,9 +1,10 @@
 import "./App.css";
 import React, { useState } from "react";
-import Counter from "./components/CounterFuncional";
-import Estado from "./components/Estado.jsx";
-import Efecto from "./components/Efecto";
-import UnreadMessages from "./components/UnreadMessages";
+// import Counter from "./components/CounterFuncional";
+// import Estado from "./components/Estado.jsx";
+// import Efecto from "./components/Efecto";
+// import UnreadMessages from "./components/UnreadMessages";
+import UserForm from "./components/UserForm/UserForm";
 
 /**
  * KATA I: Componentes en React
@@ -13,12 +14,12 @@ import UnreadMessages from "./components/UnreadMessages";
  */
 
 function App() {
-  const [showCounters, setShowCounters] = useState(true);
-  const quitarCounters = () => setShowCounters(false);
+  // const [showCounters, setShowCounters] = useState(true);
+  // const quitarCounters = () => setShowCounters(false);
   return (
     <div className="App">
       <header className="App-header">
-        {showCounters && (
+        {/* {showCounters && (
           <React.Fragment>
             <Counter initialValue={5} step={5} />
             <Counter initialValue={10} step={2} />
@@ -28,7 +29,8 @@ function App() {
 
         <Estado />
         <Efecto />
-        <UnreadMessages unreadMessages={['me gusta', 'me gusta']}/>
+        <UnreadMessages unreadMessages={["me gusta", "me gusta"]} /> */}
+        <UserForm />
       </header>
     </div>
   );
