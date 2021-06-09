@@ -5,6 +5,11 @@ class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "", genero: "" };
+    this.emailInput = React.createRef();
+  }
+  componentDidMount(){
+    console.log(this.emailInput.current);
+    this.emailInput.current.focus();
   }
   handleChange = (event) => {
     this.setState({ email: event.target.value });
@@ -23,6 +28,7 @@ class UserForm extends React.Component {
         <input
           type="email"
           name="email"
+          ref={this.emailInput}
           value={this.state.email}
           onChange={this.handleChange}
           placeholder="Introduce el email"

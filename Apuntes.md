@@ -22,3 +22,25 @@ estilos que incluyen variables, métodos etc.
 
 `yarn add node-sass` 
 `npm install node-sass`
+
+
+## Refs
+
+Casos en los que necesita modificar imperativamente un hijo fuera del flujo de datos típico.
+
+**Cuando usar Referencias**
+- Controlar enfoques, selección de texto, o reproducción de medios.
+- Activar animaciones imperativas.
+- Integración con bibliotecas DOM de tercero
+
+**Crear Ref**
+Las referencias son creadas usando `React.createRef()` y agregándolas a elementos de React mediante el atributo `ref`
+
+No hay que hacer `Document.querySelector()` hay que usar las `Ref`
+
+`this.emailInput = React.createRef();`
+`this.emailInput.current.focus();`
+
+
+
+
